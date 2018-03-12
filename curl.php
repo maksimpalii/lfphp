@@ -1,6 +1,7 @@
 <?php
 
 $keyGet = date('Y-m-d') . ' 09:00:00';
+//$keyGet = '2018-03-12 11:00:00';
 //echo $keyGet;
 //die();
 $curl = curl_init();
@@ -22,5 +23,12 @@ foreach ($result_arr as $key => $value) {
    // echo $key[$keyGet] . " buy: " . $value['b'] . " sell: " . $value['s'] .PHP_EOL;
 }
 //echo $result_arr[$keyGet];
-//var_dump($result_arr[$keyGet]);
-echo $result_arr[$keyGet]['s'];
+
+//var_dump(isset($result_arr[$keyGet]['s']));
+
+if (isset($result_arr[$keyGet]['s']) === true){
+    echo $result_arr[$keyGet]['s'];
+}
+else{
+    echo 'Данных еще нет!';
+}
