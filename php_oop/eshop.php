@@ -23,7 +23,7 @@ interface sellable {
 
 
 
-class Car extends Good {
+class Cars extends Good {
     public function __construct()
     {
         parent::__construct();
